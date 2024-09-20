@@ -1,17 +1,21 @@
 import "./App.css";
-import Player from "./components/Player";
 import { audios } from "./audioData";
 import { useState } from "react";
+import AudioFiles from "./components/AudioFiles";
+import Player from "./components/Player";
 
 function App() {
   const [songs, setSongs] = useState(audios);
 
   return (
-    <div>
-      {songs.map((song, index) => (
-        <Player key={index} song={song} />
-      ))}
-    </div>
+    <>
+      <Player />
+      <div className="app-main">
+        {songs.map((song, index) => (
+          <AudioFiles key={index} song={song} />
+        ))}
+      </div>
+    </>
   );
 }
 
