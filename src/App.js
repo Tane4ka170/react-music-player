@@ -9,7 +9,8 @@ function App() {
 
   return (
     <>
-      <Player />
+    <div className='player-main'>
+      <Player /></div>
       <div className="app-main">
         {songs.map((song, index) => (
           <AudioFiles key={index} song={song} />
