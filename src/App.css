@@ -34,4 +34,34 @@
 }
 
 .control-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  gap: 20px;
+}
+
+.icons:hover {
+  color: #7dd88a !important;
+  cursor: pointer;
+}
+
+.activeSong-name {
+  font-family: "Aldrich", system-ui;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.activeArtist-name {
+  font-family: "Aldrich", system-ui;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
