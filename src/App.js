@@ -7,16 +7,20 @@ import Player from "./components/Player";
 function App() {
   const [songs, setSongs] = useState(audios);
   const [currentSong, setCurrentSong] = useState({});
-  const getSongData = (song) => {};
+  const [currentIndex, setCurrentIndex] = useState(null);
+  const getSongData = (song, index) => {
+    setCurrentIndex(index);
+    setCurrentSong(song);
+  };
 
   return (
     <>
       <div className="player-main">
-        <Player />
+        <Player currentSong={currentSong} currentIndex={currentIndex} />
       </div>
       <div className="app-main">
         {songs.map((song, index) => (
-          <AudioFiles key={index} song={song} getSongData={getSongData} />
+          <AudioFiles index={index} song={song} getSongData={getSongData} />
         ))}
       </div>
     </>
