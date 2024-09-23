@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { CiPlay1, CiPause1 } from "react-icons/ci";
 import { RxTrackPrevious, RxTrackNext } from "react-icons/rx";
+import Music from "../assets/music-rainbow.jpg";
 
 export default function Player({
   currentSong,
@@ -29,6 +30,10 @@ export default function Player({
       <div className="player-card">
         {currentSong ? (
           <div>
+            <div className="image-container">
+              <img src={Music} alt="Music" className="music-image" />
+            </div>
+
             <h2 className="activeSong-name">{currentSong.name}</h2>
             <h4 className="activeArtist-name">{currentSong.creator}</h4>
           </div>
