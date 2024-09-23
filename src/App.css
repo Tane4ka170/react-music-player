@@ -30,16 +30,18 @@
 }
 
 .player-main {
-  padding: 10px;
   position: absolute;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
 }
 
 .control-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 35vh;
   gap: 20px;
 }
 
@@ -53,7 +55,7 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 100px;
+  top: 230px;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -63,7 +65,19 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 140px;
+  top: 280px;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+.music-image {
+  width: 200px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
