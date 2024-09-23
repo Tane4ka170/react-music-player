@@ -1,7 +1,6 @@
 import "./App.css";
 import { audios } from "./audioData";
 import { useState } from "react";
-import AudioFiles from "./components/AudioFiles";
 import Player from "./components/Player";
 
 function App() {
@@ -32,11 +31,6 @@ function App() {
           nextSong={nextSong}
           prevSong={prevSong}
         />
-      </div>
-      <div className="app-main">
-        {songs.map((song, index) => (
-          <AudioFiles index={index} song={song} getSongData={getSongData} />
-        ))}
       </div>
     </>
   );
